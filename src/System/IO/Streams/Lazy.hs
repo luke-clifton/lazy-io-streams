@@ -32,3 +32,10 @@ lazyListOutput = do
 -- | Convert an input stream of strict `ByteString`s to a lazy `ByteString`.
 toLazyByteString :: InputStream BS.ByteString -> IO BL.ByteString
 toLazyByteString is = BL.fromChunks <$> toLazyList is
+
+-- | Create a lazy `ByteString` by feeding an `OutputStream` strict
+-- `ByteString`s
+lazyByteStringOutput :: IO (OutputStream BS.ByteString, BL.ByteString)
+lazyByteStringOutput = do
+    (os, ll) <- lazyListOutput
+    return (os, BL.fromChunks ll)
