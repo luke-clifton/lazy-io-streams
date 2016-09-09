@@ -6,7 +6,7 @@ license-file:        LICENSE
 author:              Luke Clifton
 maintainer:          ltclifton@gmail.com
 build-type:          Simple
-extra-source-files:  ChangeLog.md
+extra-source-files:  README.md
 cabal-version:       >=1.10
 
 library
