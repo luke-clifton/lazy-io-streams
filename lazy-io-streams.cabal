@@ -11,7 +11,7 @@ cabal-version:       >=1.10
 
 library
   exposed-modules:     System.IO.Streams.Lazy
-  build-depends:       base >=4.8 && <4.10
+  build-depends:       base >=4.8 && <4.13
                      , bytestring
                      , io-streams
   hs-source-dirs:      src
